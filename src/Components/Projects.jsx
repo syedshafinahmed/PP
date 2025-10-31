@@ -6,6 +6,7 @@ import {
   SiAxios,
   SiJavascript,
 } from "react-icons/si";
+import { TbApi } from "react-icons/tb";
 
 
 const projectsData = [
@@ -45,7 +46,7 @@ const projectsData = [
     description:
       "Dragon News – A dynamic news website built with React and Firebase that delivers real-time news updates. Users can browse news by category, read detailed articles, and interact with comments. Features include user authentication, responsive design for mobile and desktop, and a clean, modern interface inspired by professional news portals.",
     image: "https://i.ibb.co.com/d4ZL5XFw/Screenshot-2025-10-30-003344.png",
-    technologies: ["React", "Tailwind CSS", "JavaScript", "Firebase"],
+    technologies: ["React", "Tailwind CSS", "JavaScript", "Firebase", "API Integration"],
     liveDemo: "https://dragon-news-1004e.web.app/",
     sourceCode: "https://github.com/syedshafinahmed/Dragon-News",
   },
@@ -55,7 +56,7 @@ const projectsData = [
     description:
       "English Janala – An educational platform designed to help users improve their English skills. The website provides interactive lessons for grammar and vocabulary. It features a clean, user-friendly interface, progress tracking, and responsive design for learners on any device.",
     image: "https://i.ibb.co.com/27vYXB57/Screenshot-2025-10-30-004909.png",
-    technologies: ["HTML", "Tailwind CSS", "JavaScript"],
+    technologies: ["HTML", "Tailwind CSS", "JavaScript", "API Integration"],
     liveDemo: "https://english-janala-syedshafinahmed.pages.dev/",
     sourceCode: "https://github.com/syedshafinahmed/English-Janala",
   },
@@ -65,20 +66,20 @@ const projectsData = [
     description:
       "Weather App – A responsive web application that provides real-time weather information for any city. Users can view current weather conditions, temperature, humidity, wind speed, hourly forecast, and a 7-day forecast. The app features a clean, user-friendly interface and works seamlessly across desktop and mobile devices.",
     image: "https://i.ibb.co.com/RtkDhDr/Screenshot-2025-10-30-010059.png",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML", "CSS", "JavaScript", "API Integration"],
     liveDemo: "https://weatherapp-syedshafinahmed.pages.dev/",
     sourceCode: "https://github.com/syedshafinahmed/Weather-APP",
   },
 ];
 
 const techIcons = {
-  React: <FaReact className="text-cyan-400" title="React" />,
-  "Tailwind CSS": <SiTailwindcss className="text-sky-400" title="Tailwind CSS" />,
-  Firebase: <SiFirebase className="text-yellow-400" title="Firebase" />,
-  JavaScript: <SiJavascript className="text-yellow-400" title="JavaScript" />,
-  "API Integration": <SiAxios className="text-violet-400" title="API Integration" />,
-  HTML: <FaHtml5 className="text-orange-500" title="HTML5" />,
-  CSS: <FaCss3Alt className="text-blue-500" title="CSS3" />,
+  React: <FaReact className="text-cyan-400" size={25} title="React" />,
+  "Tailwind CSS": <SiTailwindcss className="text-sky-400" size={25} title="Tailwind CSS" />,
+  Firebase: <SiFirebase className="text-yellow-400" size={25} title="Firebase" />,
+  JavaScript: <SiJavascript className="text-yellow-400" size={25} title="JavaScript" />,
+  "API Integration": <TbApi className="text-violet-400" size={30} title="API Integration" />,
+  HTML: <FaHtml5 className="text-orange-500" size={25} title="HTML5" />,
+  CSS: <FaCss3Alt className="text-blue-500" size={25} title="CSS3" />,
 };
 
 const Projects = () => {
@@ -105,7 +106,7 @@ const Projects = () => {
               <div className="card-body">
                 <h3 className="card-title">{project.title}</h3>
                 <p className="text-gray-400 text-justify">{project.description}</p>
-                <div className="flex flex-wrap gap-3 mt-3 text-2xl">
+                <div className="flex flex-wrap gap-3 mt-3 text-2xl items-center">
                   {project.technologies.map((tech, index) => (
                     <span key={index} className="tooltip" data-tip={tech}>
                       {techIcons[tech] || tech}
