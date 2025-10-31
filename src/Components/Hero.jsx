@@ -2,6 +2,7 @@ import React from 'react';
 import me from '../assets/me.jpg';
 import { FiGithub } from 'react-icons/fi';
 import { SlSocialLinkedin } from 'react-icons/sl';
+import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
   return (
@@ -11,7 +12,7 @@ const Hero = () => {
           <div className="hero-content flex-col lg:flex-row-reverse">
             <img src={me} data-aos="fade-left" className="max-w-sm mb-7 md:mb-0 rounded-full shadow-2xl" />
             <div data-aos="fade-right">
-              <h1 className="text-3xl md:text-5xl text-center md:text-left font-bold"><span className='text-gray-400'>Hi, This is </span> Syed Shafin Ahmed</h1>
+              <h1 className="text-3xl md:text-5xl text-center md:text-left font-bold"><span className='text-gray-400'>Hi, This is </span> <TypeAnimation sequence={['Syed Shafin Ahmed', 1500, '', 500,]} speed={70} repeat={Infinity} cursor={false} /></h1>
               <p className="text-sm md:text-lg py-6 px-10 md:px-0 text-center md:text-left text-gray-400">
                 An aspiring developer with a strong foundation in frontend development and a growing focus on backend architecture and APIs.
               </p>
