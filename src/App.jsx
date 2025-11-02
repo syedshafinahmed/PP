@@ -10,6 +10,7 @@ import Publications from './Components/Publications'
 import Hobbies from './Components/Hobbies'
 import Connect from './Components/Connect'
 import Footer from './Components/Footer'
+import Certificates from './Components/Certificates'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       <SkillsGrid></SkillsGrid>
       <Projects></Projects>
       <Publications></Publications>
+      {/* <Certificates></Certificates> */}
       <Hobbies></Hobbies>
       <Connect></Connect>
       <Footer></Footer>

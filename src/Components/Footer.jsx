@@ -1,11 +1,60 @@
 import React from 'react';
+import { FaLinkedin } from 'react-icons/fa';
+import { FiGithub } from 'react-icons/fi';
+import { SiGmail } from 'react-icons/si';
+import { SlSocialLinkedin } from 'react-icons/sl';
+import { TbBrandGithubFilled } from 'react-icons/tb';
 
 const Footer = () => {
   return (
     <div>
-      <footer className="footer sm:footer-horizontal footer-center bg-base-300 border-t border-white/10 text-base-content p-10">
+      {/* <footer className="footer sm:footer-horizontal footer-center bg-base-300 border-t border-white/10 text-base-content p-10">
         <aside>
           <p>Copyright © {new Date().getFullYear()} - All right reserved. <strong>Syed Shafin Ahmed</strong></p>
+        </aside>
+      </footer> */}
+
+
+
+      <footer className="footer footer-horizontal footer-center border-t border-white/10 bg-base-300 text-base-content rounded p-10">
+        <nav className="grid grid-flow-col gap-4">
+          <a href="#skills" className="link link-hover">Skills</a>
+          <a href="#projects" className="link link-hover">Project</a>
+          <a href="#publications" className="link link-hover">Research</a>
+          <a href="#hobbies" className="link link-hover">Hobbies</a>
+          <a href="#connect" className="link link-hover">Contact</a>
+        </nav>
+
+        <nav>
+          <div className="grid grid-flow-col gap-6">
+            <a
+              href="https://github.com/syedshafinahmed"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-3xl text-[#F4A24C] transition-all duration-300 hover:drop-shadow-[0_0_30px_rgba(255,215,0,1)]"
+            >
+              <TbBrandGithubFilled size={25} />
+            </a>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=shafinahmed.cse@gmail.com&su=Hello%20Shafin&body=I%20wanted%20to%20reach%20out%20regarding..."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-3xl text-[#F4A24C] transition-all duration-300 hover:drop-shadow-[0_0_30px_rgba(255,215,0,1)]"
+            >
+              <SiGmail size={25} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/syed-shafin-ahmed-760533351/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-3xl text-[#F4A24C] transition-all duration-300 hover:drop-shadow-[0_0_30px_rgba(255,215,0,1)]"
+            >
+              <FaLinkedin size={25} />
+            </a>
+          </div>
+        </nav>
+        <aside>
+          <p>Copyright © {new Date().getFullYear()} - All right reserved by <strong>Syed Shafin Ahmed</strong></p>
         </aside>
       </footer>
     </div>

@@ -28,7 +28,7 @@ const projectsData = [
     image: "https://i.ibb.co.com/mr8TZ2GV/Screenshot-2025-10-30-003043.png",
     technologies: ["React", "Tailwind CSS", "JavaScript", "Firebase", "API Integration"],
     liveDemo: "https://greennest-syedshafinahmed.pages.dev/",
-    sourceCode: "https://github.com/username/ecommerce-store",
+    sourceCode: "https://github.com/syedshafinahmed/GreenNest",
   },
   {
     id: 3,
