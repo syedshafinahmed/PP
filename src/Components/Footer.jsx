@@ -8,14 +8,6 @@ import { TbBrandGithubFilled } from 'react-icons/tb';
 const Footer = () => {
   return (
     <div>
-      {/* <footer className="footer sm:footer-horizontal footer-center bg-base-300 border-t border-white/10 text-base-content p-10">
-        <aside>
-          <p>Copyright © {new Date().getFullYear()} - All right reserved. <strong>Syed Shafin Ahmed</strong></p>
-        </aside>
-      </footer> */}
-
-
-
       <footer className="footer footer-horizontal footer-center border-t border-white/10 bg-base-300 text-base-content rounded p-10">
         <nav className="grid grid-flow-col gap-4">
           <a href="#skills" className="link link-hover">Skills</a>
