@@ -1,5 +1,5 @@
 ## 🌐 Live Demo
 
-https://syedshafinahmed.pages.dev/ 
+https://syedshafinahmed.netlify.app/
 
 ---
