@@ -8,19 +8,19 @@ import { TiSocialFacebook } from "react-icons/ti";
 const socials = [
   {
     name: "Facebook",
-    icon: <TiSocialFacebook />,
+    icon: <TiSocialFacebook size={20} />,
     hoverImage: "https://i.ibb.co.com/VYFk2Ybk/icons8-facebook-96.png",
     link: "https://www.facebook.com/share/1D5Tt4jQW8/",
   },
   {
     name: "Instagram",
-    icon: <FaInstagram />,
+    icon: <FaInstagram size={20} />,
     hoverImage: "https://i.ibb.co.com/v6dQnxfb/icons8-instagram-96.png",
     link: "https://www.instagram.com/__shafin__ahmed?igsh=mta0agj0odbqawv2yq==",
   },
   {
     name: "WhatsApp",
-    icon: <FaWhatsapp />,
+    icon: <FaWhatsapp size={20} />,
     hoverImage: "https://i.ibb.co.com/0RzkTvrh/whatsapp-4423697.png",
     link: "https://wa.me/+8801630216932",
   },
@@ -67,7 +67,7 @@ const Connect = () => {
             Feel free to reach out — I’d love to hear from you.
           </p>
 
-          <div className="flex gap-8 flex-wrap justify-center">
+          {/* <div className="flex gap-8 flex-wrap justify-center">
             {socials.map((item, i) => (
               <a
                 key={i}
@@ -93,6 +93,15 @@ const Connect = () => {
                 </span>
               </a>
             ))}
+          </div> */}
+          <div className="flex gap-5">
+            {
+              socials.map((item, i) => (
+                <a key={i} href={item.link} className="w-12 h-12 flex items-center justify-center rounded-full border border-orange-300 text-orange-300 hover:bg-orange-300 hover:text-black transition-all duration-100">
+                  {item.icon}
+                </a>
+              ))
+            }
           </div>
         </div>
 

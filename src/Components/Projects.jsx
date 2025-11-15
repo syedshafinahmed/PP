@@ -15,16 +15,26 @@ import { TbApi } from "react-icons/tb";
 const projectsData = [
   {
     id: 1,
+    title: "Uplyft",
+    description:
+      "Uplyft – A community-driven event management platform where users can discover, create, and join local social service events such as cleanups, tree plantation drives, and donation programs. The platform features secure authentication, and an intuitive interface for browsing upcoming events. Users can manage the events they create, track the events they’ve joined, and stay engaged in meaningful community activities—all through a modern, responsive single-page application.",
+    image: "https://i.ibb.co.com/j9ZTbnLQ/uplyft-syedshafinahmed-netlify-app.png",
+    technologies: ["React", "Tailwind CSS", "Firebase", "MongoDB", "NodeJS", "ExpressJS"],
+    liveDemo: "https://uplyft-syedshafinahmed.netlify.app/",
+    sourceCode: "https://github.com/syedshafinahmed/Uplyft-Client",
+  },
+  {
+    id: 2,
     title: "3D Models Hub",
     description:
       "3D Models Hub – A full-stack web application that allows users to explore, upload, update, and download 3D models across various categories such as Vehicles, Characters, Plants, and more. It provides an intuitive, theme-adaptive interface and a personalized experience powered by Firebase authentication and secure server-side APIs.",
     image: "https://i.ibb.co.com/Xfz2124S/3dmodelshub-syedshafinahmed-netlify-app-1.png",
-    technologies: ["React", "Tailwind CSS", "MongoDB", "NodeJS", "ExpressJS"],
+    technologies: ["React", "Tailwind CSS", "Firebase", "MongoDB", "NodeJS", "ExpressJS"],
     liveDemo: "https://3dmodelshub-syedshafinahmed.netlify.app/",
     sourceCode: "https://github.com/syedshafinahmed/3D-Model-Client",
   },
   {
-    id: 2,
+    id: 3,
     title: "Zappify",
     description:
       "Zappify – A modern, responsive web application built with React and Tailwind CSS that brings you a simulated app store experience. Explore top-rated apps, view their stats, install and manage them locally — all within a beautiful and interactive interface.",
@@ -34,7 +44,7 @@ const projectsData = [
     sourceCode: "https://github.com/syedshafinahmed/Zappify",
   },
   {
-    id: 3,
+    id: 4,
     title: "GreenNest",
     description:
       "GreenNest – An elegant single-page web application built for plant lovers who want to nurture and decorate their homes with healthy indoor plants. The platform allows users to explore plant care guides, buy plants, and book expert consultations — ensuring a greener and healthier living space during any season.",
@@ -44,7 +54,7 @@ const projectsData = [
     sourceCode: "https://github.com/syedshafinahmed/GreenNest",
   },
   {
-    id: 4,
+    id: 5,
     title: "Green Earth",
     description:
       "Green Earth – An online platform showcasing various types of trees where users can explore, purchase plants and eco-friendly products, and make donations to support environmental initiatives. Features include a user-friendly catalog, secure checkout, donation functionality, and a responsive design for all devices.",
@@ -54,7 +64,7 @@ const projectsData = [
     sourceCode: "https://github.com/syedshafinahmed/Green-Earth",
   },
   {
-    id: 5,
+    id: 6,
     title: "Dragon News",
     description:
       "Dragon News – A dynamic news website built with React and Firebase that delivers real-time news updates. Users can browse news by category, read detailed articles, and interact with comments. Features include user authentication, responsive design for mobile and desktop, and a clean, modern interface inspired by professional news portals.",
@@ -64,7 +74,7 @@ const projectsData = [
     sourceCode: "https://github.com/syedshafinahmed/Dragon-News",
   },
   {
-    id: 6,
+    id: 7,
     title: "English Janala",
     description:
       "English Janala – An educational platform designed to help users improve their English skills. The website provides interactive lessons for grammar and vocabulary. It features a clean, user-friendly interface, progress tracking, and responsive design for learners on any device.",
@@ -74,7 +84,7 @@ const projectsData = [
     sourceCode: "https://github.com/syedshafinahmed/English-Janala",
   },
   {
-    id: 7,
+    id: 8,
     title: "Weather App",
     description:
       "Weather App – A responsive web application that provides real-time weather information for any city. Users can view current weather conditions, temperature, humidity, wind speed, hourly forecast, and a 7-day forecast. The app features a clean, user-friendly interface and works seamlessly across desktop and mobile devices.",
