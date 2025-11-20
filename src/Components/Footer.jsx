@@ -36,7 +36,7 @@ const Footer = () => {
               <SiGmail size={25} />
             </a>
             <a
-              href="https://www.linkedin.com/in/syed-shafin-ahmed-760533351/"
+              href="https://www.linkedin.com/in/syed-shafin-ahmed/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-3xl text-[#F4A24C] transition-all duration-300 hover:drop-shadow-[0_0_30px_rgba(255,215,0,1)]"
