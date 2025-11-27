@@ -54,7 +54,8 @@ const Publications = () => {
                 View Full Paper
               </a>
               <a
-                href={publicationData.pptLink}
+                href="/Sentiment Analysis of YouTube Comments A Comprehensive Study of Machine Learning Models.pptx"
+                download
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-dash"

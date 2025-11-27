@@ -14,7 +14,7 @@ const Hero = () => {
             <div data-aos="fade-right">
               <h1 className="text-3xl md:text-5xl text-center md:text-left font-bold"><span className='text-gray-400'>Hi, This is </span> <TypeAnimation sequence={['Syed Shafin Ahmed', 1500, '', 500,]} speed={70} repeat={Infinity} cursor={false} /></h1>
               <p className="text-sm md:text-lg py-6 px-10 md:px-0 text-center md:text-left text-gray-400">
-                An aspiring developer with a strong foundation in frontend development and a growing focus on backend architecture and APIs.
+                An aspiring Full-Stack Developer with a strong foundation in frontend development and a growing focus on backend architecture and APIs.
               </p>
 
               <div className="flex justify-center items-center md:justify-start gap-5 mb-10 md:mb-0">
