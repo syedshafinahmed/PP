@@ -10,9 +10,9 @@ const Footer = () => {
         <nav className="grid grid-flow-col gap-4">
           <a href="#" className="link link-hover text-[#F4A24C]">About Me</a>
           <a href="#skills" className="link link-hover text-[#F4A24C]">Skills</a>
-          <a href="#projects" className="link link-hover text-[#F4A24C]">Project</a>
-          <a href="#publications" className="link link-hover text-[#F4A24C]">Research</a>
+          <a href="#projects" className="link link-hover text-[#F4A24C]">Projects</a>
           <a href="#education" className="link link-hover text-[#F4A24C]">Education</a>
+          <a href="#publications" className="link link-hover text-[#F4A24C]">Research</a>
           <a href="#hobbies" className="link link-hover text-[#F4A24C]">Hobbies</a>
           <a href="#connect" className="link link-hover text-[#F4A24C]">Contact</a>
         </nav>

@@ -11,6 +11,7 @@ import Hobbies from './Components/Hobbies'
 import Connect from './Components/Connect'
 import Footer from './Components/Footer'
 import Certificates from './Components/Certificates'
+import Education from './Components/Education'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       <Hero></Hero>
       <SkillsGrid></SkillsGrid>
       <Projects></Projects>
+      <Education></Education>
       <Publications></Publications>
       {/* <Certificates></Certificates> */}
       <Hobbies></Hobbies>

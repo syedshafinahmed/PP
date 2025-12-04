@@ -123,7 +123,7 @@ const techIcons = {
 
 const Projects = () => {
   return (
-    <section className="py-12 bg-base-200" id="projects">
+    <section className="pt-12 pb-30 bg-base-200" id="projects">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center py-20">
           My Projects
