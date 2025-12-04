@@ -36,7 +36,7 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "Artoon",
+    title: "3D Models Hub",
     description:
       "3D Models Hub – A full-stack web application that allows users to explore, upload, update, and download 3D models across various categories such as Vehicles, Characters, Plants, and more. It provides an intuitive, theme-adaptive interface and a personalized experience powered by Firebase authentication and secure server-side APIs.",
     image: "https://i.ibb.co.com/Xfz2124S/3dmodelshub-syedshafinahmed-netlify-app-1.png",
