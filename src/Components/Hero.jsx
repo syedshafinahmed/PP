@@ -17,7 +17,6 @@ const Hero = () => {
                 <h1 className="text-3xl md:text-5xl">
                   <span className="text-gray-400">Syed Shafin Ahmed</span>
                 </h1>
-
                 <div className="h-6 text-2xl mt-4 flex justify-center md:justify-start items-center">
                   <TypeAnimation
                     className="text-2xl"
@@ -42,7 +41,7 @@ const Hero = () => {
               </p>
 
               <div className="flex justify-center items-center md:justify-start gap-5 mb-10 md:mb-0">
-                <a href='/Syed Shafin Ahmed.pdf' download className='btn text-black border-none bg-[#F4A24C] text-base-200 btn-sm'>Download Resume</a>
+                <a href='/Syed Shafin Ahmed.pdf' download className='btn text-black border-none bg-[#F4A24C] btn-sm'>Download Resume</a>
                 <a
                   href="https://github.com/syedshafinahmed"
                   target="_blank"

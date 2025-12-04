@@ -1,8 +1,6 @@
 import React from 'react';
 import { FaLinkedin } from 'react-icons/fa';
-import { FiGithub } from 'react-icons/fi';
 import { SiGmail } from 'react-icons/si';
-import { SlSocialLinkedin } from 'react-icons/sl';
 import { TbBrandGithubFilled } from 'react-icons/tb';
 
 const Footer = () => {
@@ -10,11 +8,13 @@ const Footer = () => {
     <div>
       <footer className="footer footer-horizontal footer-center border-t border-white/10 bg-base-300 text-base-content rounded p-10">
         <nav className="grid grid-flow-col gap-4">
-          <a href="#skills" className="link link-hover">Skills</a>
-          <a href="#projects" className="link link-hover">Project</a>
-          <a href="#publications" className="link link-hover">Research</a>
-          <a href="#hobbies" className="link link-hover">Hobbies</a>
-          <a href="#connect" className="link link-hover">Contact</a>
+          <a href="#" className="link link-hover text-[#F4A24C]">About Me</a>
+          <a href="#skills" className="link link-hover text-[#F4A24C]">Skills</a>
+          <a href="#projects" className="link link-hover text-[#F4A24C]">Project</a>
+          <a href="#publications" className="link link-hover text-[#F4A24C]">Research</a>
+          <a href="#education" className="link link-hover text-[#F4A24C]">Education</a>
+          <a href="#hobbies" className="link link-hover text-[#F4A24C]">Hobbies</a>
+          <a href="#connect" className="link link-hover text-[#F4A24C]">Contact</a>
         </nav>
 
         <nav>
@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
         </nav>
         <aside>
-          <p>Copyright © {new Date().getFullYear()} - All right reserved by <strong>Syed Shafin Ahmed</strong></p>
+          <p className='text-[#F4A24C]'>Copyright © {new Date().getFullYear()} - All right reserved by <strong>Syed Shafin Ahmed</strong></p>
         </aside>
       </footer>
     </div>
