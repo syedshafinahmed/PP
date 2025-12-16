@@ -3,7 +3,7 @@ import me from '../assets/me.jpg';
 import { FiGithub } from 'react-icons/fi';
 import { SlSocialLinkedin } from 'react-icons/sl';
 import { TypeAnimation } from 'react-type-animation';
-import { FaGithubSquare, FaLinkedin } from 'react-icons/fa';
+import { FaGithubSquare, FaHome, FaLinkedin } from 'react-icons/fa';
 
 const Hero = () => {
   return (
@@ -41,22 +41,22 @@ const Hero = () => {
               </p>
 
               <div className="flex justify-center items-center md:justify-start gap-5 mb-10 md:mb-0">
-                <a href='/Syed Shafin Ahmed.pdf' download className='btn text-black border-none bg-[#F4A24C] btn-sm'>Download Resume</a>
+                <a href='/Syed Shafin Ahmed.pdf' download className='btn text-black rounded-sm border-none bg-[#F4A24C] btn-sm'>Download Resume</a>
                 <a
                   href="https://github.com/syedshafinahmed"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-3xl text-[#F4A24C] hover:text-[#F4A24C] transition-all duration-300 hover:drop-shadow-[0_0_30px_rgba(255,215,0,1)]"
+                  className="text-[#F4A24C] hover:text-[#F4A24C] transition-all duration-300 hover:drop-shadow-[0_0_30px_rgba(255,215,0,1)]"
                 >
-                  <FaGithubSquare size={30} />
+                  <FaGithubSquare size={35} />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/syed-shafin-ahmed/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-3xl text-[#F4A24C] hover:text-[#F4A24C] transition-all duration-300 hover:drop-shadow-[0_0_30px_rgba(255,215,0,1)]"
+                  className="text-[#F4A24C] hover:text-[#F4A24C] transition-all duration-300 hover:drop-shadow-[0_0_30px_rgba(255,215,0,1)]"
                 >
-                  <FaLinkedin size={30} />
+                  <FaLinkedin size={35} />
                 </a>
               </div>
 
