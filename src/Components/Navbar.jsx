@@ -17,13 +17,13 @@ const Navbar = () => {
 
             <ul tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100/80 backdrop-blur-md rounded-box mt-3 w-52 p-2 shadow font-bold">
-              <li><a href="#">About Me</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#education">Education</a></li>
-              <li><a href="#publications">Research</a></li>
-              <li><a href="#hobbies">Hobbies</a></li>
-              <li><a href="#connect">Contact</a></li>
+              <li><a href="/#">About Me</a></li>
+              <li><a href="/#skills">Skills</a></li>
+              <li><a href="/#projects">Projects</a></li>
+              <li><a href="/#education">Education</a></li>
+              <li><a href="/#publications">Research</a></li>
+              <li><a href="/#hobbies">Hobbies</a></li>
+              <li><a href="/#connect">Contact</a></li>
             </ul>
           </div>
 
@@ -33,13 +33,13 @@ const Navbar = () => {
 
           <div className="hidden lg:flex w-auto justify-end">
             <ul className="menu menu-horizontal px-1 font-bold">
-              <li><a href="#">About Me</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#education">Education</a></li>
-              <li><a href="#publications">Research</a></li>
-              <li><a href="#hobbies">Hobbies</a></li>
-              <li><a href="#connect">Contact</a></li>
+              <li><a href="/#">About Me</a></li>
+              <li><a href="/#skills">Skills</a></li>
+              <li><a href="/#projects">Projects</a></li>
+              <li><a href="/#education">Education</a></li>
+              <li><a href="/#publications">Research</a></li>
+              <li><a href="/#hobbies">Hobbies</a></li>
+              <li><a href="/#connect">Contact</a></li>
             </ul>
           </div>
 
