@@ -18,3 +18,19 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Hide TypeAnimation cursor */
+.react-type-animation-cursor,
+[class*="react-type-animation"]::after,
+span::after {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  content: none !important;
+}
+
+/* Target TypeAnimation wrapper specifically */
+span[class*="TypeAnimation"]::after {
+  display: none !important;
+  content: none !important;
+}
