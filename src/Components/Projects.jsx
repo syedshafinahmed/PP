@@ -74,7 +74,7 @@ const Projects = () => {
   const displayedProjects = projects.slice(0, 3);
 
   return (
-    <section className="pt-16 pb-28 bg-base-200" id="projects">
+    <section className="pt-20 pb-28 bg-base-200" id="projects">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

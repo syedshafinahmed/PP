@@ -11,8 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local 
-projects.json 
-certificates.json 
+/public/projects.json 
+/public/certificates.json 
 
 # Editor directories and files
 .vscode/*

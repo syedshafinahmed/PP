@@ -22,6 +22,7 @@ const Navbar = () => {
               <li><a href="/#projects">Projects</a></li>
               <li><a href="/#education">Education</a></li>
               <li><a href="/#publications">Research</a></li>
+              <li><a href="/#certificates">Certificates</a></li>
               <li><a href="/#hobbies">Hobbies</a></li>
               <li><a href="/#connect">Contact</a></li>
             </ul>
@@ -38,6 +39,7 @@ const Navbar = () => {
               <li><a href="/#projects">Projects</a></li>
               <li><a href="/#education">Education</a></li>
               <li><a href="/#publications">Research</a></li>
+              <li><a href="/#certificates">Certificates</a></li>
               <li><a href="/#hobbies">Hobbies</a></li>
               <li><a href="/#connect">Contact</a></li>
             </ul>
