@@ -15,6 +15,7 @@ const Footer = () => {
               { label: "Projects", to: "#projects" },
               { label: "Education", to: "#education" },
               { label: "Research", to: "#publications" },
+              { label: "Certificates", to: "#certificates" },
               { label: "Hobbies", to: "#hobbies" },
               { label: "Contact", to: "#connect" },
             ].map((item, i) => (

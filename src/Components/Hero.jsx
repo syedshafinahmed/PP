@@ -120,7 +120,7 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group relative h-10 w-10 flex items-center justify-center rounded-sm bg-linear-to-br from-[#F4A24C]/20 to-[#F4A24C]/5 backdrop-blur-md border-2 border-[#F4A24C]/30 text-[#F4A24C] hover:border-[#F4A24C] hover:bg-linear-to-br hover:from-[#F4A24C] hover:to-[#F4A24C]/80 hover:text-black transition-all duration-300 hover:shadow-[0_0_25px_rgba(244,162,76,0.6)]"
+                  className="group relative h-10 w-10 flex items-center justify-center rounded-sm bg-linear-to-br from-[#F4A24C]/20 via-[#F4A24C]/10 to-black backdrop-blur-md border border-[#F4A24C]/30 text-[#F4A24C] transition-all duration-300 hover:shadow-[0_0_25px_rgba(244,162,76,0.1)]"
                 >
                   <TbBrandGithubFilled  size={22} className="relative z-10" />
                   <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
@@ -134,7 +134,7 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group relative h-10 w-10 flex items-center justify-center rounded-sm bg-linear-to-br from-[#F4A24C]/20 to-[#F4A24C]/5 backdrop-blur-md border-2 border-[#F4A24C]/30 text-[#F4A24C] hover:border-[#F4A24C] hover:bg-linear-to-br hover:from-[#F4A24C] hover:to-[#F4A24C]/80 hover:text-black transition-all duration-300 hover:shadow-[0_0_25px_rgba(244,162,76,0.6)]"
+                  className="group relative h-10 w-10 flex items-center justify-center rounded-sm bg-linear-to-br from-[#F4A24C]/20 via-[#F4A24C]/10 to-black backdrop-blur-md border border-[#F4A24C]/30 text-[#F4A24C] transition-all duration-300 hover:shadow-[0_0_25px_rgba(244,162,76,0.1)]"
                 >
                   <TfiLinkedin size={22} className="relative z-10" />
                   <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
@@ -178,7 +178,8 @@ const Hero = () => {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute -bottom-4 -right-4 md:-right-8 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 shadow-xl"
+                className="absolute -bottom-4 -right-4 md:-right-8 bg-linear-to-br from-[#F4A24C]/40 to-black backdrop-blur-md border border-[#F4A24C]/30 rounded-lg px-4 py-2 shadow-xl"
+                // className="absolute -bottom-4 -right-4 md:-right-8 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2 shadow-xl"
               >
                 <span className="text-xs md:text-sm text-[#F4A24C] font-semibold">
                   Available for work

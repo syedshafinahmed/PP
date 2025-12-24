@@ -7,6 +7,7 @@ import Hobbies from "./Hobbies";
 import Connect from "./Connect";
 import Education from "./Education";
 import Certificates from "./Certificates";
+import ScrollToTop from "./ScrollToTop";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <Certificates />
       <Hobbies />
       <Connect />
+      <ScrollToTop />
     </>
   );
 };
