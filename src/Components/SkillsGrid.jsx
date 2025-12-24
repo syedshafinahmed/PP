@@ -69,8 +69,8 @@ const SkillsGrid = () => {
             onClick={() => setActiveTab(tab)}
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300
               ${activeTab === tab
-                ? "bg-orange-400 text-black"
-                : "bg-white/10 text-gray-400 hover:bg-white/20 hover:text-orange-300"
+                ? "bg-[#F4A24C] text-black"
+                : "bg-white/10 text-gray-400 hover:bg-white/20 hover:text-[#F4A24C]"
               }`}
           >
             {tab}
@@ -92,16 +92,17 @@ const SkillsGrid = () => {
               exit="exit"
               viewport={{ once: false, amount: 0.25 }} 
               whileHover={{ y: -10 }}
-              className="group p-6 rounded-2xl backdrop-blur-md bg-white/10 dark:bg-white/5
-                border border-white/10 shadow-sm
+              className="group p-6 rounded-2xl bg-linear-to-br from-[#F4A24C]/20 to-black backdrop-blur-md border border-[#F4A24C]/30
+                text-[#F4A25C] 
+                 shadow-sm
                 hover:shadow-[0_0_30px_rgba(255,165,0,0.45)]
                 transition-all duration-300 cursor-pointer"
             >
-              <div className="text-4xl text-gray-400 group-hover:text-orange-300 mb-4">
+              <div className="text-4xl mb-4">
                 {skill.icon}
               </div>
 
-              <p className="text-sm font-medium text-gray-300 group-hover:text-orange-300 mb-3">
+              <p className="text-sm font-black mb-3">
                 {skill.name}
               </p>
 
@@ -111,11 +112,11 @@ const SkillsGrid = () => {
                   whileInView={{ width: `${skill.level}%` }}
                   viewport={{ once: false }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
-                  className="h-full bg-orange-400"
+                  className="h-full bg-[#F4A24C]"
                 />
               </div>
 
-              <p className="text-xs text-gray-400 mt-2">
+              <p className="text-xs font-extralight text-gray-400 mt-2">
                 Proficiency: {skill.level}%
               </p>
             </motion.div>

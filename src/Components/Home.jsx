@@ -6,6 +6,7 @@ import Publications from "./Publications";
 import Hobbies from "./Hobbies";
 import Connect from "./Connect";
 import Education from "./Education";
+import Certificates from "./Certificates";
 
 const Home = () => {
   return (
@@ -15,7 +16,7 @@ const Home = () => {
       <Projects />
       <Education />
       <Publications />
-      {/* <Certificates /> */}
+      <Certificates />
       <Hobbies />
       <Connect />
     </>
