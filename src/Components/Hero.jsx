@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import me from '../assets/me.jpg';
 import { TypeAnimation } from 'react-type-animation';
-import { FaGithubSquare, FaLinkedin } from 'react-icons/fa';
+import { TbBrandGithubFilled } from 'react-icons/tb';
+import { TfiLinkedin } from 'react-icons/tfi';
 
 const Hero = () => {
   const containerVariants = {
@@ -121,7 +122,7 @@ const Hero = () => {
                   whileTap={{ scale: 0.95 }}
                   className="group relative h-10 w-10 flex items-center justify-center rounded-sm bg-gradient-to-br from-[#F4A24C]/20 to-[#F4A24C]/5 backdrop-blur-md border-2 border-[#F4A24C]/30 text-[#F4A24C] hover:border-[#F4A24C] hover:bg-gradient-to-br hover:from-[#F4A24C] hover:to-[#F4A24C]/80 hover:text-black transition-all duration-300 hover:shadow-[0_0_25px_rgba(244,162,76,0.6)]"
                 >
-                  <FaGithubSquare size={22} className="relative z-10" />
+                  <TbBrandGithubFilled  size={22} className="relative z-10" />
                   <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
                     GitHub
                   </span>
@@ -135,7 +136,7 @@ const Hero = () => {
                   whileTap={{ scale: 0.95 }}
                   className="group relative h-10 w-10 flex items-center justify-center rounded-sm bg-gradient-to-br from-[#F4A24C]/20 to-[#F4A24C]/5 backdrop-blur-md border-2 border-[#F4A24C]/30 text-[#F4A24C] hover:border-[#F4A24C] hover:bg-gradient-to-br hover:from-[#F4A24C] hover:to-[#F4A24C]/80 hover:text-black transition-all duration-300 hover:shadow-[0_0_25px_rgba(244,162,76,0.6)]"
                 >
-                  <FaLinkedin size={22} className="relative z-10" />
+                  <TfiLinkedin size={22} className="relative z-10" />
                   <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
                     LinkedIn
                   </span>
