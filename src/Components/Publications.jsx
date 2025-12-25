@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { SiResearchgate } from "react-icons/si";
+import { FaFilePdf, FaDownload, FaFlask, FaCalendarAlt, FaExternalLinkAlt, FaFileAlt } from "react-icons/fa";
 
 const publicationData = {
   title: "Sentiment Analysis of YouTube Comments: A Comprehensive Study of Machine Learning Models",
@@ -23,55 +25,123 @@ const Publications = () => {
   };
 
   return (
-    <section className="py-30 bg-base-200" id="publications">
-      <div data-aos="fade-right" className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center pb-15">Research</h2>
-        <div className="card bg-base-100 shadow-xl border border-base-300 hover:shadow-2xl transition-shadow duration-300">
-          <div className="card-body">
-            <h3 className="card-title text-2xl">{publicationData.title}</h3>
+    <section className="relative py-20 px-6 max-w-7xl mx-auto" id="publications">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 right-10 w-96 h-96 bg-[#F4A24C]/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-72 h-72 bg-[#F4A24C]/10 rounded-full blur-3xl"></div>
+      </div>
 
-            <p className="mt-3 text-gray-400 text-justify"><strong>Abstract: </strong>
-              {getAbstractText()}
-              {publicationData.abstract.length > maxLength && (
-                <span
-                  onClick={() => setReadMore(!readMore)}
-                  className="text-orange-300 underline cursor-pointer ml-1"
-                >
-                  {readMore ? "Show Less" : "Read More"}
-                </span>
-              )}
-            </p>
+      <div className="relative z-10">
+        {/* Header */}
+        <div className="text-center mb-16" data-aos="fade-up">
+          <div className="inline-flex items-center justify-center gap-3 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-[#F4A24C] via-orange-400 to-[#F4A24C] bg-clip-text text-transparent">
+              Research & Publications
+            </h2>
+          </div>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            Exploring the intersection of machine learning and natural language processing
+          </p>
+        </div>
 
-            <p className="mt-2 text-gray-500 italic">{publicationData.type} | {publicationData.date}</p>
+        {/* Publication Card */}
+        <div data-aos="fade-up" data-aos-delay="100">
+          <div className="group relative backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 md:p-10 shadow-xl transition-all duration-500 hover:scale-[1.01] hover:border-[#F4A24C]/30">
+            {/* Header Section */}
+            <div className="mb-6">
+              <div className="flex items-start justify-between gap-4 mb-4">
+                <div className="flex-1">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-[#F4A24C] transition-colors duration-300">
+                    {publicationData.title}
+                  </h3>
 
-            <div className="card-actions justify-start mt-6 gap-3 md:gap-5">
-              <a
+                  {/* Meta Information */}
+                  <div className="flex flex-wrap items-center gap-4">
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#F4A24C]/20 border border-[#F4A24C]/30">
+                      <FaFlask className="text-[#F4A24C]" size={14} />
+                      <span className="text-sm text-[#F4A24C] font-semibold">{publicationData.type}</span>
+                    </div>
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10">
+                      <FaCalendarAlt className="text-gray-400" size={14} />
+                      <span className="text-sm text-gray-300">{publicationData.date}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Abstract Section */}
+            <div className="mb-8">
+              <div className="flex items-center gap-2 mb-4">
+                <FaFileAlt className="text-[#F4A24C]" size={20} />
+                <h4 className="text-lg font-semibold text-white">Abstract</h4>
+              </div>
+              <div className="p-6 rounded-xl bg-white/5 border border-white/5 backdrop-blur-sm">
+                <p className="text-gray-300 text-justify leading-relaxed text-sm md:text-base">
+                  {getAbstractText()}
+                  {publicationData.abstract.length > maxLength && (
+                    <button
+                      onClick={() => setReadMore(!readMore)}
+                      className="ml-2 text-[#F4A24C] hover:text-orange-400 font-semibold underline transition-colors duration-300"
+                    >
+                      {readMore ? "Show Less" : "Read More"}
+                    </button>
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex flex-wrap items-center gap-3 ">
+              <motion.a
                 href={publicationData.paperLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-soft"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className="group/btn flex items-center gap-2 btn rounded-xl bg-linear-to-r from-[#F4A24C] to-orange-400 text-black font-semibold hover:from-orange-400 hover:to-[#F4A24C] transition-all duration-300"
               >
-                View Full Paper
-              </a>
-              <a
+                <FaFilePdf size={18} />
+                <span>View Full Paper</span>
+                {/* <FaExternalLinkAlt size={14} className="group-hover/btn:translate-x-1 transition-transform duration-300" /> */}
+              </motion.a>
+
+              <motion.a
                 href="/Sentiment Analysis of YouTube Comments A Comprehensive Study of Machine Learning Models.pptx"
                 download
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-dash"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className="group/btn flex items-center gap-2 btn rounded-xl backdrop-blur-xl bg-white/10 border border-white/20 text-[#F4A24C] hover:bg-[#F4A24C]/10 hover:border-[#F4A24C]/30 transition-all duration-300 font-semibold"
               >
-                Download PPT
-              </a>
-              <a
-                href={publicationData.researchGateProfile}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 tooltip"
-                data-tip="Explore My Research"
-              >
-                <SiResearchgate className="text-orange-300 text-lg hover:drop-shadow-[0_0_30px_rgba(255,215,0,0.6)]" size={30} />
-              </a>
+                <FaDownload size={18} />
+                <span>Download PPT</span>
+              </motion.a>
+
+              {/* ResearchGate Button with separate group for tooltip */}
+              <div className="relative group/researchgate">
+                <a
+                  href={publicationData.researchGateProfile}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 flex items-center justify-center rounded-xl backdrop-blur-xl bg-white/10 border border-white/20 text-[#F4A24C] hover:bg-[#F4A24C]/10 hover:border-[#F4A24C]/30 transition-all duration-300 hover:scale-110"
+                  aria-label="Explore My Research"
+                >
+                  <SiResearchgate size={24} className="group-hover/researchgate:scale-110 transition-transform duration-300" />
+                </a>
+                <span className="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 group-hover/researchgate:opacity-100 transition-opacity duration-300 text-xs whitespace-nowrap bg-black/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-white pointer-events-none z-30">
+                  ResearchGate Profile
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black/90"></div>
+                </span>
+              </div>
             </div>
+
+            {/* Shine Effect */}
+            <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-linear-to-r from-transparent via-white/5 to-transparent rounded-2xl"></div>
           </div>
         </div>
       </div>

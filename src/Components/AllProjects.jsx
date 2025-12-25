@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { FaReact, FaCss3Alt, FaHtml5 } from "react-icons/fa";
+import { FaReact, FaCss3Alt, FaHtml5, FaArrowLeft, FaExternalLinkAlt } from "react-icons/fa";
 import { MdArrowOutward } from "react-icons/md";
 import { RiNextjsFill } from "react-icons/ri";
 import {
@@ -26,7 +26,7 @@ const cardVariant = {
     x: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut",
+      ease: [0.4, 0, 0.2, 1],
     },
   },
 };
@@ -73,33 +73,49 @@ const AllProjects = () => {
   }, []);
 
   return (
-    <section className="pt-24 pb-28 bg-base-200 min-h-screen" id="all-projects">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center mb-10">
-          <button className="btn btn-ghost btn-sm" onClick={() => navigate(-1)}>
-            ← Back
-          </button>
+    <section className="relative py-20 px-6 min-h-screen" id="all-projects">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 right-10 w-96 h-96 bg-[#F4A24C]/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-72 h-72 bg-[#F4A24C]/10 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="flex items-center justify-between mb-12">
+          <motion.button
+            whileHover={{ scale: 1.05, x: -5 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => navigate(-1)}
+            className="flex items-center gap-2 px-4 py-2 rounded-xl backdrop-blur-xl bg-white/5 border border-white/10 text-gray-300 hover:text-[#F4A24C] hover:bg-[#F4A24C]/10 hover:border-[#F4A24C]/30 transition-all duration-300"
+          >
+            <FaArrowLeft size={16} />
+            <span className="font-semibold">Back</span>
+          </motion.button>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-4xl font-bold text-center flex-1"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold bg-linear-to-r from-[#F4A24C] via-orange-400 to-[#F4A24C] bg-clip-text text-transparent"
           >
             All Projects
           </motion.h2>
-          <span className="w-[72px]" />
+          <span className="w-[100px]" />
         </div>
 
         {error && (
-          <div className="alert alert-error mb-8">
-            <span>{error}</span>
+          <div className="backdrop-blur-xl bg-red-500/10 border border-red-500/30 rounded-2xl p-6 mb-8 max-w-2xl mx-auto">
+            <p className="text-red-400 font-semibold text-center">{error}</p>
           </div>
         )}
 
         {loading ? (
-          <div className="text-center text-gray-400">Loading projects...</div>
+          <div className="text-center py-20">
+            <div className="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#F4A24C]"></div>
+            <p className="mt-4 text-gray-400">Loading projects...</p>
+          </div>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 px-5 md:px-0">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <motion.div
                 key={project.id}
@@ -107,77 +123,96 @@ const AllProjects = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.25 }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
-                className="card card-compact bg-base-100 shadow-xl hover:shadow-[0_0_25px_rgba(255,215,0,0.5)]"
+                transition={{ delay: index * 0.1, type: "spring", stiffness: 100 }}
+                whileHover={{ y: -8 }}
+                className="group relative backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:border-[#F4A24C]/30"
               >
-                <figure className="overflow-hidden">
+                {/* Image */}
+                <figure className="relative overflow-hidden h-48 bg-linear-to-br from-[#F4A24C]/10 to-orange-400/10">
                   <motion.img
                     src={project.image}
                     alt={project.title}
-                    whileHover={{ scale: 1.08 }}
-                    transition={{ duration: 0.4 }}
-                    className="w-full object-cover"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.5 }}
+                    className="w-full h-full object-cover"
                   />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </figure>
 
-                <div className="card-body">
-                  <div className="flex items-start justify-between gap-3">
-                    <h3 className="card-title">{project.title}</h3>
+                {/* Content */}
+                <div className="p-6">
+                  <div className="flex items-start justify-between gap-3 mb-3">
+                    <h3 className="text-xl font-bold text-white group-hover:text-[#F4A24C] transition-colors duration-300 flex-1">
+                      {project.title}
+                    </h3>
                     <Link
                       to={`/projects/${project.id}`}
-                      className="btn btn-ghost btn-xs btn-circle tooltip"
-                      data-tip="View Details"
+                      className="group/link relative w-8 h-8 flex items-center justify-center rounded-lg backdrop-blur-sm bg-white/5 border border-white/10 text-gray-400 hover:text-[#F4A24C] hover:bg-[#F4A24C]/10 hover:border-[#F4A24C]/30 transition-all duration-300 hover:scale-110"
                       aria-label="View details"
                     >
-                      <MdArrowOutward size={16} />
+                      <MdArrowOutward size={18} />
+                      <span className="absolute -top-10 left-1/2 -translate-x-1/2 w-max px-3 py-1.5 text-xs bg-black/90 backdrop-blur-sm rounded-lg text-white opacity-0 group-hover/link:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap z-30">
+                        View Details
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black/90"></div>
+                      </span>
                     </Link>
                   </div>
 
-                  <p
-                    className="text-gray-400 text-justify text-sm"
-                    style={{
-                      display: "-webkit-box",
-                      WebkitLineClamp: 2,
-                      WebkitBoxOrient: "vertical",
-                      overflow: "hidden",
-                    }}
-                  >
+                  <p className="text-gray-400 text-sm mb-4 line-clamp-2">
                     {project.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-3 items-center mt-4">
-                    {project.technologies?.map((tech) => (
+                  {/* Technologies */}
+                  <div className="flex flex-wrap gap-2 mb-5">
+                    {project.technologies?.slice(0, 4).map((tech) => (
                       <span
                         key={tech}
-                        className="tooltip"
-                        data-tip={tech}
-                        aria-label={tech}
+                        className="group/tech relative inline-flex items-center justify-center w-8 h-8 rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:text-[#F4A24C] hover:border-[#F4A24C]/30 transition-all duration-300"
                       >
                         {techIcons[tech]}
+                        <span className="absolute -top-10 left-1/2 -translate-x-1/2 w-max px-2 py-1 text-xs bg-black/90 backdrop-blur-sm rounded-md text-white opacity-0 group-hover/tech:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap z-30">
+                          {tech}
+                          <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-3 border-r-3 border-t-3 border-transparent border-t-black/90"></div>
+                        </span>
                       </span>
                     ))}
+                    {project.technologies?.length > 4 && (
+                      <span className="inline-flex items-center justify-center px-2 h-8 rounded-lg bg-white/5 border border-white/10 text-xs text-gray-400">
+                        +{project.technologies.length - 4}
+                      </span>
+                    )}
                   </div>
 
-                  <div className="card-actions justify-between items-center gap-3 mt-5 flex-wrap">
-                    <a
+                  {/* Action Buttons */}
+                  <div className="flex gap-3">
+                    <motion.a
                       href={project.liveDemo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn btn-soft btn-sm"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                      className="flex-1 px-4 py-2.5 rounded-xl bg-linear-to-r from-[#F4A24C] to-orange-400 text-black font-semibold text-sm hover:from-orange-400 hover:to-[#F4A24C] transition-all duration-300 text-center flex items-center justify-center gap-2"
                     >
-                      Live Demo
-                    </a>
-                    <a
+                      <FaExternalLinkAlt size={14} />
+                      <span>Live Demo</span>
+                    </motion.a>
+                    <motion.a
                       href={project.sourceCode}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn btn-outline btn-sm"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                      className="flex-1 px-4 py-2.5 rounded-xl backdrop-blur-sm bg-white/10 border border-white/20 text-[#F4A24C] hover:bg-[#F4A24C]/10 hover:border-[#F4A24C]/30 transition-all duration-300 font-semibold text-sm text-center"
                     >
                       Source Code
-                    </a>
+                    </motion.a>
                   </div>
                 </div>
+
+                {/* Shine Effect */}
+                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-linear-to-r from-transparent via-white/5 to-transparent"></div>
               </motion.div>
             ))}
           </div>

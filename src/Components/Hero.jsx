@@ -120,11 +120,13 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group relative h-10 w-10 flex items-center justify-center rounded-sm bg-linear-to-br from-[#F4A24C]/20 via-[#F4A24C]/10 to-black backdrop-blur-md border border-[#F4A24C]/30 text-[#F4A24C] transition-all duration-300 hover:shadow-[0_0_25px_rgba(244,162,76,0.1)]"
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  className="group relative h-10 w-10 flex items-center justify-center rounded-sm bg-linear-to-br from-[#F4A24C]/20 via-[#F4A24C]/10 to-black backdrop-blur-md border border-[#F4A24C]/30 text-[#F4A24C] transition-all duration-300"
                 >
                   <TbBrandGithubFilled  size={22} className="relative z-10" />
-                  <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                  <span className="absolute -top-12 left-1/2 -translate-x-1/2 text-xs bg-black/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-30">
                     GitHub
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black/90"></div>
                   </span>
                   <div className="absolute inset-0 rounded-sm bg-[#F4A24C]/20 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300"></div>
                 </motion.a>
@@ -134,11 +136,13 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group relative h-10 w-10 flex items-center justify-center rounded-sm bg-linear-to-br from-[#F4A24C]/20 via-[#F4A24C]/10 to-black backdrop-blur-md border border-[#F4A24C]/30 text-[#F4A24C] transition-all duration-300 hover:shadow-[0_0_25px_rgba(244,162,76,0.1)]"
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  className="group relative h-10 w-10 flex items-center justify-center rounded-sm bg-linear-to-br from-[#F4A24C]/20 via-[#F4A24C]/10 to-black backdrop-blur-md border border-[#F4A24C]/30 text-[#F4A24C] transition-all duration-300"
                 >
                   <TfiLinkedin size={22} className="relative z-10" />
-                  <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                  <span className="absolute -top-12 left-1/2 -translate-x-1/2 text-xs bg-black/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-30">
                     LinkedIn
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black/90"></div>
                   </span>
                   <div className="absolute inset-0 rounded-sm bg-[#F4A24C]/20 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300"></div>
                 </motion.a>
