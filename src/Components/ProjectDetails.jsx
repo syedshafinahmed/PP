@@ -13,6 +13,7 @@ import {
   SiMongodb,
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
+import { GrTechnology } from "react-icons/gr";
 
 const techIcons = {
   React: <FaReact className="text-cyan-400" size={22} />,
@@ -101,7 +102,7 @@ const ProjectDetails = () => {
   }
 
   return (
-    <section className="relative pt-24 pb-20 min-h-screen">
+    <section className="relative pt-40 pb-40 min-h-screen">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-10 w-96 h-96 bg-[#F4A24C]/5 rounded-full blur-3xl"></div>
@@ -160,7 +161,7 @@ const ProjectDetails = () => {
             {/* Technologies */}
             <div className="space-y-3">
               <h4 className="text-lg font-semibold text-white flex items-center gap-2">
-                <FaCode className="text-[#F4A24C]" size={18} />
+                <GrTechnology className="text-[#F4A24C]" size={18} />
                 Technologies Used
               </h4>
               <div className="flex flex-wrap gap-3">

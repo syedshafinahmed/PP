@@ -136,13 +136,13 @@ const Certificates = () => {
                     />
 
                     {/* linear Overlay */}
-                    <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                     {/* Content Overlay */}
                     <div className="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                       {/* Issuer Badge */}
                       <div className="mb-3">
-                        <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F4A24C]/20 backdrop-blur-sm border border-[#F4A24C]/30 text-[#F4A24C] text-xs font-semibold">
+                        <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F4A24C] backdrop-blur-sm border border-[#F4A24C]/30 text-base-200 text-xs font-semibold">
                           <FiAward size={14} />
                           {cert.issuer}
                         </span>
