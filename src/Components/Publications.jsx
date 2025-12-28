@@ -101,7 +101,7 @@ const Publications = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                className="group/btn flex items-center gap-2 btn rounded-xl bg-linear-to-r from-[#F4A24C] to-orange-400 text-black font-semibold hover:from-orange-400 hover:to-[#F4A24C] transition-all duration-300"
+                className="group/btn flex border-none items-center gap-2 btn rounded-xl bg-linear-to-r from-[#F4A24C] to-orange-400 text-black font-semibold hover:from-orange-400 hover:to-[#F4A24C] transition-all duration-300"
               >
                 <FaFilePdf size={18} />
                 <span>View Full Paper</span>
@@ -128,10 +128,11 @@ const Publications = () => {
                   href={publicationData.researchGateProfile}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 flex items-center justify-center rounded-xl backdrop-blur-xl bg-white/10 border border-white/20 text-[#F4A24C] hover:bg-[#F4A24C]/10 hover:border-[#F4A24C]/30 transition-all duration-300 hover:scale-110"
+                  className="w-9 h-9 flex items-center justify-center border rounded-xl border-[#F4A24C]"
+                  // className="w-10 h-10 flex items-center justify-center rounded-xl backdrop-blur-xl bg-white/10 border border-white/20 text-[#F4A24C] hover:bg-[#F4A24C]/10 hover:border-[#F4A24C]/30 transition-all duration-300 hover:scale-110"
                   aria-label="Explore My Research"
                 >
-                  <SiResearchgate size={24} className="group-hover/researchgate:scale-110 transition-transform duration-300" />
+                  <SiResearchgate size={20} className="group-hover/researchgate:scale-110 transition-transform duration-100" />
                 </a>
                 <span className="absolute -top-12 left-1/2 -translate-x-1/2 opacity-0 group-hover/researchgate:opacity-100 transition-opacity duration-300 text-xs whitespace-nowrap bg-black/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-white pointer-events-none z-30">
                   ResearchGate Profile

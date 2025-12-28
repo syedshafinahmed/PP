@@ -52,7 +52,7 @@ const Education = () => {
         </div>
 
         {/* Education Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 space-y-5 md:space-y-0 gap-6 lg:gap-8 max-w-7xl mx-auto">
           {educationData.map((edu, index) => (
             <motion.div
               key={index}
@@ -134,7 +134,12 @@ const Education = () => {
                 </div>
 
                 {/* Shine Effect */}
-                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-linear-to-r from-transparent via-white/5 to-transparent rounded-2xl pointer-events-none"></div>
+                {/* <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-linear-to-r from-transparent via-white/5 to-transparent rounded-2xl pointer-events-none"></div> */}
+                <div className="absolute inset-0 rounded-2xl pointer-events-none">
+                  <div className="absolute inset-0 overflow-hidden rounded-2xl">
+                    <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-linear-to-r from-transparent via-white/5 to-transparent" />
+                  </div>
+                </div>
               </motion.div>
             </motion.div>
           ))}

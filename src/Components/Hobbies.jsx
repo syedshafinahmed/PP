@@ -1,6 +1,5 @@
 import React from "react";
 import { SiLetterboxd, SiChessdotcom } from "react-icons/si";
-import { FaFilm, FaChess, FaExternalLinkAlt } from "react-icons/fa";
 
 const hobbies = [
   {
@@ -10,9 +9,9 @@ const hobbies = [
     description: "I have a deep passion for movies and love exploring cinematic worlds, analyzing stories, and discovering hidden gems.",
     hoverImage: "https://i.ibb.co.com/n8YLnhBB/icons8-letterboxd-96.png",
     tooltip: "Dive into my movie picks",
-    color: "hover:text-red-500 hover:bg-red-500/10 hover:border-red-500/30",
-    linear: "from-red-500/20 to-pink-500/20",
-    iconBg: "bg-red-500/20",
+    color: "hover:text-blue-500 hover:bg-blue-500/10 hover:border-blue-500/30",
+    linear: "from-blue-500/20 to-blue-500/20",
+    iconBg: "bg-blue-500/20",
   },
   {
     name: "Chess.com",
@@ -43,7 +42,7 @@ const Hobbies = () => {
             Hobbies & Interests
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Beyond coding, here's what I love to do in my free time
+            Beyond coding, here's what I love to do in my free time.
           </p>
         </div>
 
@@ -57,7 +56,7 @@ const Hobbies = () => {
               rel="noopener noreferrer"
               data-aos="fade-up"
               data-aos-delay={index * 100}
-              className={`group relative flex flex-col p-8 rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 shadow-xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 ${hobby.color} overflow-hidden`}
+              className={`group relative flex flex-col p-8 rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 shadow-xl transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 ${hobby.color}`}
             >
               {/* Tooltip */}
               <span className="absolute -top-12 left-1/2 -translate-x-1/2 w-max px-4 py-2 text-sm bg-black/90 backdrop-blur-sm rounded-lg text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
@@ -68,7 +67,7 @@ const Hobbies = () => {
               {/* Icon Container */}
               <div className="relative mb-6 flex justify-center">
                 <div className={`relative w-24 h-24 rounded-2xl ${hobby.iconBg} border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}>
-                  <div className={`relative z-10 text-gray-400 transition-colors duration-300 flex items-center justify-center ${hobby.name === "Letterboxd" ? "group-hover:text-red-500" : "group-hover:text-green-500"}`}>
+                  <div className={`relative z-10 text-gray-400 transition-colors duration-300 flex items-center justify-center ${hobby.name === "Letterboxd" ? "group-hover:text-blue-500" : "group-hover:text-green-500"}`}>
                     {hobby.icon}
                   </div>
                   <div className={`absolute inset-0 rounded-2xl bg-linear-to-br ${hobby.linear} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
@@ -80,17 +79,14 @@ const Hobbies = () => {
                 <h3 className="text-2xl font-bold text-white mb-3 transition-colors duration-300 flex items-center justify-center gap-2">
                   {hobby.name === "Letterboxd" && (
                     <>
-                      <FaFilm size={20} className="group-hover:text-red-500 transition-colors duration-300" />
-                      <span className="group-hover:text-red-500 transition-colors duration-300">{hobby.name}</span>
+                      <span className="group-hover:text-blue-500 transition-colors duration-300">{hobby.name}</span>
                     </>
                   )}
                   {hobby.name === "Chess.com" && (
                     <>
-                      <FaChess size={20} className="group-hover:text-green-500 transition-colors duration-300" />
                       <span className="group-hover:text-green-500 transition-colors duration-300">{hobby.name}</span>
                     </>
                   )}
-                  <FaExternalLinkAlt size={14} className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </h3>
                 <p className="text-gray-400 text-sm md:text-base leading-relaxed">
                   {hobby.description}
@@ -101,7 +97,11 @@ const Hobbies = () => {
               <div className={`absolute inset-0 rounded-2xl bg-linear-to-br ${hobby.linear} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
 
               {/* Shine Effect */}
-              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-linear-to-r from-transparent via-white/10 to-transparent rounded-2xl"></div>
+              <div className="absolute inset-0 rounded-2xl pointer-events-none">
+                <div className="absolute inset-0 overflow-hidden rounded-2xl">
+                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-linear-to-r from-transparent via-white/10 to-transparent" />
+                </div>
+              </div>
 
               {/* Corner Accent */}
               <div className={`absolute top-0 right-0 w-20 h-20 bg-linear-to-br ${hobby.linear} opacity-0 group-hover:opacity-20 rounded-bl-full transition-opacity duration-500`}></div>
