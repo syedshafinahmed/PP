@@ -13,8 +13,9 @@ dist-ssr
 *.local 
 /public/projects.json 
 /public/certificates.json 
-/public/Sentiment_Analysis_of_YouTube_Comments_A_Comprehensive_Study_of_Machine_Learning_Models.pptx
-/public/Syed_Shafin_Ahmed.pdf
+/public/*.pdf
+/public/*.pptx
+
 
 # Editor directories and files
 .vscode/*
