@@ -142,12 +142,6 @@ const Projects = () => {
                     {/* Tech Icons (NO animation) */}
                     <div className="flex flex-wrap gap-2 mb-5">
                       {project.technologies?.slice(0, 4).map((tech) => (
-                        // <span
-                        //   key={tech}
-                        //   className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-white/5 border border-white/10"
-                        // >
-                        //   {techIcons[tech]}
-                        // </span>
                         <span
                           key={tech}
                           className="group/tech relative inline-flex items-center justify-center w-8 h-8 rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:text-[#F4A24C] hover:border-[#F4A24C]/30 transition-all duration-300"

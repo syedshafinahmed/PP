@@ -105,7 +105,6 @@ const Publications = () => {
               >
                 <FaFilePdf size={18} />
                 <span>View Full Paper</span>
-                {/* <FaExternalLinkAlt size={14} className="group-hover/btn:translate-x-1 transition-transform duration-300" /> */}
               </motion.a>
 
               <motion.a

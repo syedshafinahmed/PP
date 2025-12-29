@@ -64,7 +64,7 @@ const ProjectDetails = () => {
 
   if (loading) {
     return (
-      <section className="relative pt-24 pb-20 min-h-screen">
+      <section className="relative pt-20 pb-20 min-h-screen">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 right-10 w-96 h-96 bg-[#F4A24C]/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 left-10 w-72 h-72 bg-[#F4A24C]/10 rounded-full blur-3xl"></div>
@@ -102,16 +102,16 @@ const ProjectDetails = () => {
   }
 
   return (
-    <section className="relative pt-40 pb-40 min-h-screen">
+    <section className="relative pt-30 md:pt-40 pb-40 min-h-screen">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-10 w-96 h-96 bg-[#F4A24C]/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-10 w-72 h-72 bg-[#F4A24C]/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-5 md:gap-0 mb-8 md:mb-16">
           <motion.button
             whileHover={{ scale: 1.05, x: -5 }}
             whileTap={{ scale: 0.95 }}
@@ -121,7 +121,7 @@ const ProjectDetails = () => {
             <FaArrowLeft size={16} />
             <span className="font-semibold">Back</span>
           </motion.button>
-          <h2 className="text-2xl md:text-3xl font-bold bg-linear-to-r from-[#F4A24C] via-orange-400 to-[#F4A24C] bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-5xl font-bold bg-linear-to-r from-[#F4A24C] via-orange-400 to-[#F4A24C] bg-clip-text text-transparent">
             Project Details
           </h2>
           <span className="w-[100px]" />
@@ -153,7 +153,7 @@ const ProjectDetails = () => {
               <h3 className="text-3xl md:text-4xl font-bold text-white group-hover:text-[#F4A24C] transition-colors duration-300">
                 {project.title}
               </h3>
-              <p className="text-gray-300 leading-relaxed text-base md:text-lg">
+              <p className="text-gray-300 leading-relaxed text-justify text-base md:text-lg">
                 {project.description}
               </p>
             </div>
