@@ -110,7 +110,7 @@ const Projects = () => {
                     <motion.img
                       src={project.image}
                       alt={project.title}
-                      whileHover={reduceMotion ? {} : { scale: 1.1 }}
+                      whileHover={reduceMotion ? {} : { scale: 1.05 }}
                       transition={{ duration: reduceMotion ? 0 : 0.5 }}
                       className="w-full h-full object-cover"
                     />
